@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta Especial</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80vw;
+            height: 50vh;
+            max-width: 500px;
+            max-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #yes {
+            background-color: #4CAF50;
+        }
+        #no {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>¿Me amarías si fuera un gusano?</p>
+        <button id="yes">Sí</button>
+        <button id="no">No</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        document.getElementById('yes').addEventListener('click', function() {
+            document.getElementById('response').textContent = 'Te quiero';
+        });
+
+        document.getElementById('no').addEventListener('click', function() {
+            document.getElementById('response').textContent = 'Bye';
+        });
+    </script>
+</body>
+</html>
